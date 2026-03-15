@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>HHD APARTMENT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="home-page">
+    <!-- 头部横幅 -->
+    <div class="header-banner">
+      <img src="images/photo01.jpg" class="banner-bg-image" alt="Banner">
+      <div class="banner-overlay"></div>
+      <div class="banner-content">
+        <h1 class="app-title" id="appTitle">华海达公寓</h1>
+        <p class="slogan" id="slogan">您的理想居住空间</p>
+        <p class="tagline" id="tagline">核心地段•精装品质•24h安保</p>
+      </div>
+      
+      <!-- 语言切换器 -->
+      <div class="language-switcher">
+        <span class="language-label" id="languageLabel">语言</span>
+        <div class="language-options">
+          <button class="lang-btn active" data-lang="zh" onclick="changeLanguage('zh')">中</button>
+          <button class="lang-btn" data-lang="en" onclick="changeLanguage('en')">EN</button>
+          <button class="lang-btn" data-lang="th" onclick="changeLanguage('th')">ไทย</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 筛选标签 -->
+    <div class="filter-container">
+      <div class="filter-tab active" data-filter="all" onclick="changeFilter('all')">
+        <span class="filter-text" id="allUnits">全部房源</span>
+      </div>
+      <div class="filter-tab" data-filter="studio" onclick="changeFilter('studio')">
+        <span class="filter-text" id="studio">大单间</span>
+      </div>
+    </div>
+
+    <!-- 房源列表 -->
+    <div class="property-list" id="propertyList">
+      <!-- 动态生成 -->
+    </div>
+
+    <!-- 关于按钮 -->
+    <div class="about-button-container">
+      <button class="about-button" onclick="showAbout()">
+        <span class="about-button-text" id="aboutTitle">关于我们</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- 详情页模态框 -->
+  <div class="modal" id="detailModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="properties.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
